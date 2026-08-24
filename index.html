@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Anand Wakde — Build Log</title>
-<meta name="description" content="A manifest of shipped products and projects." />
+<title>Anand Wakde — Payments Product Owner</title>
+<meta name="description" content="Senior Product Owner in Payments Modernization & Compliance, building AI-assisted tools for ISO 20022 migration, compliance automation, and payments infrastructure." />
 
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -13,20 +13,20 @@
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anandwakde.com/">
-<meta property="og:title" content="Anand Wakde — Build Log">
-<meta property="og:description" content="A manifest of shipped products and projects." />
+<meta property="og:title" content="Anand Wakde — Payments Product Owner">
+<meta property="og:description" content="Senior Product Owner in Payments Modernization & Compliance, building AI-assisted tools for ISO 20022 migration, compliance automation, and payments infrastructure." />
 <meta property="og:image" content="https://anandwakde.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anand Wakde — Build Log">
-<meta name="twitter:description" content="A manifest of shipped products and projects." />
+<meta name="twitter:title" content="Anand Wakde — Payments Product Owner">
+<meta name="twitter:description" content="Senior Product Owner in Payments Modernization & Compliance, building AI-assisted tools for ISO 20022 migration, compliance automation, and payments infrastructure." />
 <meta name="twitter:image" content="https://anandwakde.com/assets/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@400;500;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper: #E9EDEC;
@@ -66,52 +66,156 @@
 
   .wrap{ max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
-  .site-mark{
-    padding: 32px 0 0;
+  /* ---------- hero (milestone 1) ---------- */
+  .hero-wrap{
+    --hero-ink: #14181B;
+    --hero-ink-soft: rgba(20,24,27,0.62);
+    --hero-accent: #2E6BE6;
+    background:
+      radial-gradient(ellipse 900px 480px at 18% -10%, rgba(255,183,178,0.28), transparent 60%),
+      radial-gradient(ellipse 900px 480px at 85% 0%, rgba(154,196,255,0.30), transparent 60%),
+      radial-gradient(ellipse 700px 420px at 50% 30%, rgba(178,232,201,0.22), transparent 60%),
+      #FCFDFE;
+    font-family: 'DM Sans', -apple-system, 'system-ui', 'Segoe UI', sans-serif;
+    color: var(--hero-ink);
   }
-  .site-mark img{
-    width: 36px;
-    height: 36px;
-    display: block;
+
+  .floating-nav{
+    position: sticky;
+    top: 16px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  .nav-inner{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(20,24,27,0.08);
+    border-radius: 999px;
+    padding: 12px 22px;
+    box-shadow: 0 6px 24px rgba(20,24,27,0.06);
+  }
+  .nav-brand{
+    font-weight: 700;
+    font-size: 14.5px;
+    text-decoration: none;
+    color: var(--hero-ink);
+  }
+  .nav-links{ display: flex; gap: 26px; }
+  .nav-links a{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--hero-ink-soft);
+    transition: color 140ms ease;
+  }
+  .nav-links a:hover{ color: var(--hero-ink); }
+
+  @media (max-width: 560px){
+    .nav-links{ gap: 16px; }
+    .nav-links a{ font-size: 12.5px; }
+  }
+
+  .hero{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 96px 24px 72px;
+    text-align: center;
+  }
+
+  .hero-headline{
+    margin: 0 0 40px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: clamp(38px, 8vw, 68px);
+    line-height: 1.25;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 28px;
+  }
+  .mark{
+    position: relative;
+    display: inline-block;
+    padding: 0 4px;
+  }
+  .mark::before{
+    content: "";
+    position: absolute;
+    left: -4px; right: -4px;
+    bottom: 0.12em;
+    height: 0.4em;
+    border-radius: 3px 8px 4px 9px / 6px;
+    z-index: -1;
+  }
+  .mark-a{ color: #1c1f22; transform: rotate(-2deg); }
+  .mark-a::before{ background: #F7B3AB; }
+  .mark-b{ color: #1c1f22; transform: rotate(1.5deg); }
+  .mark-b::before{ background: #A9CBF7; }
+  .mark-c{ color: #1c1f22; transform: rotate(-1deg); }
+  .mark-c::before{ background: #ABE3C4; }
+
+  .hero-greeting{
+    font-weight: 800;
+    font-size: clamp(24px, 4vw, 34px);
+    margin: 0;
+  }
+  .hero-greeting .wave{ display: inline-block; animation: wave 2.4s ease-in-out infinite; transform-origin: 70% 70%; }
+  @keyframes wave{
+    0%, 60%, 100%{ transform: rotate(0deg); }
+    10%{ transform: rotate(14deg); }
+    20%{ transform: rotate(-8deg); }
+    30%{ transform: rotate(14deg); }
+    40%{ transform: rotate(-4deg); }
+  }
+
+  .scroll-cue{
+    display: inline-flex;
+    margin-top: 56px;
+    color: var(--hero-ink-soft);
+    text-decoration: none;
+    animation: bob 1.8s ease-in-out infinite;
+  }
+  @keyframes bob{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(6px); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero-greeting .wave, .scroll-cue{ animation: none; }
   }
 
   /* ---------- masthead ---------- */
   .masthead{
-    padding: 24px 0 56px;
+    padding: 64px 0 56px;
     border-bottom: 1px solid var(--line);
+    font-family: 'DM Sans', -apple-system, 'system-ui', 'Segoe UI', sans-serif;
+    background:
+      radial-gradient(ellipse 700px 360px at 90% 0%, rgba(154,196,255,0.14), transparent 60%),
+      #FCFDFE;
   }
-  .eyebrow{
-    font-family: var(--font-mono);
+
+  .section-eyebrow{
     font-size: 12px;
-    letter-spacing: 0.14em;
-    color: var(--ink-soft);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 22px;
-  }
-  .eyebrow::before{
-    content: "";
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--signal);
-    box-shadow: 0 0 0 3px rgba(27,110,86,0.15);
-  }
-  h1{
-    font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(30px, 5.2vw, 44px);
+    letter-spacing: 0.12em;
+    color: #2E6BE6;
+    margin: 0 0 8px;
+  }
+  .section-title{
+    font-weight: 800;
+    font-size: clamp(26px, 4vw, 34px);
     letter-spacing: -0.01em;
-    line-height: 1.05;
-    margin: 0 0 10px;
+    margin: 0 0 32px;
+    color: var(--ink);
   }
-  .tagline{
-    font-size: clamp(14.5px, 2.2vw, 16px);
-    color: var(--ink-soft);
-    max-width: 48ch;
-    margin: 0 0 18px;
-  }
-  .tagline strong{ color: var(--ink); font-weight: 600; }
 
   /* ---------- id row (photo + bio) ---------- */
   .id-row{
@@ -131,26 +235,26 @@
   .id-photo img{ width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block; }
   .id-info{ flex: 1; min-width: 0; }
 
-  .role-line{
-    font-family: var(--font-mono);
-    font-size: 12.5px;
-    letter-spacing: 0.02em;
+  .bio-text{
+    font-size: clamp(15px, 2vw, 16.5px);
+    line-height: 1.65;
     color: var(--ink-soft);
-    margin: 0 0 14px;
+    max-width: 60ch;
+    margin: 0 0 16px;
   }
-  .role-line .sep{ color: var(--line); margin: 0 7px; }
+  .bio-text em{ color: var(--ink); font-style: normal; font-weight: 700; }
 
   .focus-tags{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin: 0 0 18px;
+    margin: 8px 0 18px;
   }
   .focus-tags span{
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.03em;
-    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 6px 12px;
     border: 1px solid var(--line);
     border-radius: 999px;
     color: var(--ink-soft);
@@ -158,189 +262,331 @@
 
   .id-links{ display: flex; gap: 18px; flex-wrap: wrap; }
   .id-links a{
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.02em;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     text-decoration: none;
     border-bottom: 1px solid var(--ink);
     padding-bottom: 2px;
     transition: color 140ms ease, border-color 140ms ease;
   }
-  .id-links a:hover{ color: var(--stamp); border-color: var(--stamp); }
+  .id-links a:hover{ color: #2E6BE6; border-color: #2E6BE6; }
 
   @media (max-width: 480px){
     .id-row{ flex-direction: column; }
     .id-photo{ width: 76px; height: 76px; }
   }
 
-  /* ---------- manifest ---------- */
-  .manifest{ padding: 48px 0 40px; }
-
-  .entry{
-    padding: 40px 0;
-    opacity: 0;
-    transform: translateY(14px);
-    animation: rise 560ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: calc(var(--i, 0) * 110ms);
+  /* ---------- currently building ---------- */
+  .currently-building{ margin-top: 48px; }
+  .building-list{
+    display: flex;
+    flex-direction: column;
   }
-  .entry + .entry{ border-top: 1px solid var(--line); }
-
-  @keyframes rise{
-    to{ opacity: 1; transform: translateY(0); }
-  }
-
-  .entry-meta{
+  .building-item{
     display: flex;
     align-items: center;
-    gap: 14px;
-    font-family: var(--font-mono);
-    font-size: 11.5px;
-    letter-spacing: 0.08em;
-    color: var(--ink-faint);
-    margin-bottom: 16px;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 4px;
+    text-decoration: none;
+    color: var(--ink);
+    border-top: 1px solid var(--line);
+    transition: padding-left 160ms ease;
   }
-  .entry-index{ color: var(--ink-soft); }
-  .entry-status{ display: inline-flex; align-items: center; gap: 6px; }
-  .entry-status .dot{
+  .building-item:last-child{ border-bottom: 1px solid var(--line); }
+  .building-item:hover{ padding-left: 10px; }
+  .building-text{ display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .building-title{ font-weight: 700; font-size: 16.5px; }
+  .building-desc{ font-size: 13.5px; color: var(--ink-soft); max-width: 56ch; }
+  .building-arrow{
+    flex-shrink: 0;
+    font-size: 18px;
+    color: var(--ink-soft);
+    transition: transform 160ms ease, color 160ms ease;
+  }
+  .building-item:hover .building-arrow{ color: #2E6BE6; transform: translate(2px, -2px); }
+
+  /* ---------- services ---------- */
+  .services-section{
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: 'DM Sans', -apple-system, 'system-ui', 'Segoe UI', sans-serif;
+  }
+  .services-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .service-card{
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #FCFDFE;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+  .service-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(20,24,27,0.07);
+  }
+  .service-icon{
+    display: inline-flex;
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+  .service-title{
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .service-desc{
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  @media (max-width: 700px){
+    .services-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- skills marquee ---------- */
+  .skills-section{
+    padding: 40px 0 56px;
+    border-bottom: 1px solid var(--line);
+    font-family: 'DM Sans', -apple-system, 'system-ui', 'Segoe UI', sans-serif;
+  }
+  .marquee{
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .marquee-track{
+    display: flex;
+    width: max-content;
+    gap: 10px;
+    animation: marquee-scroll 46s linear infinite;
+  }
+  .marquee:hover .marquee-track{ animation-play-state: paused; }
+  .marquee-group{ display: flex; gap: 10px; flex-shrink: 0; }
+  .skill-tag{
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    background: #FCFDFE;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+  @keyframes marquee-scroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .marquee-track{ animation: none; overflow-x: auto; }
+  }
+
+  /* ---------- timeline ---------- */
+  .timeline-section{
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: 'DM Sans', -apple-system, 'system-ui', 'Segoe UI', sans-serif;
+  }
+  .timeline-list{ display: flex; flex-direction: column; }
+  .timeline-entry{
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+  .timeline-entry:last-child{ border-bottom: 1px solid var(--line); }
+  .timeline-date{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    padding-top: 2px;
+  }
+  .timeline-role{
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+  .timeline-company{
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #2E6BE6;
+    margin: 0 0 14px;
+  }
+  .timeline-bullets{
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .timeline-bullets li{
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 620px){
+    .timeline-entry{ grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* ---------- featured products ---------- */
+  .projects-section{
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: 'DM Sans', -apple-system, 'system-ui', 'Segoe UI', sans-serif;
+  }
+  .projects-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .project-card{
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #FCFDFE;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+  .project-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(20,24,27,0.08);
+  }
+  .project-visual{
+    aspect-ratio: 16 / 10;
+    background: var(--paper-deep);
+  }
+  .project-visual svg{ width: 100%; height: 100%; display: block; }
+  .project-body{ padding: 22px; }
+  .project-status{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--signal);
+    margin-bottom: 10px;
+  }
+  .project-status::before{
+    content: "";
     width: 6px; height: 6px; border-radius: 50%;
     background: var(--signal);
   }
-  .entry-meta .sep{ color: var(--line); }
-
-  .entry-card{
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 28px;
-    align-items: start;
+  .project-title{
+    font-weight: 800;
+    font-size: 19px;
+    margin: 0 0 8px;
   }
-
-  .entry-visual{
-    position: relative;
-    aspect-ratio: 1 / 1;
-    border-radius: 14px;
-    background: var(--paper-deep);
-    overflow: visible;
-    box-shadow: 0 1px 0 rgba(22,26,29,0.04);
-  }
-  .entry-visual svg{
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    border-radius: 14px;
-  }
-
-  .stamp{
-    position: absolute;
-    top: -14px;
-    right: -16px;
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    border: 1.6px solid var(--stamp-mark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(-16deg) scale(0.6);
-    opacity: 0;
-    animation: stamp-press 420ms cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
-    animation-delay: calc(var(--i, 0) * 110ms + 460ms);
-    background: rgba(19, 26, 29, 0.55);
-  }
-  .stamp::before{
-    content: "";
-    position: absolute;
-    inset: 5px;
-    border-radius: 50%;
-    border: 1px solid var(--stamp-mark);
-  }
-  .stamp-text{
-    font-family: var(--font-mono);
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    color: var(--stamp-mark);
-    text-align: center;
-    line-height: 1.3;
-  }
-  @keyframes stamp-press{
-    0%{ opacity: 0; transform: rotate(-16deg) scale(1.5); }
-    70%{ opacity: 0.9; }
-    100%{ opacity: 0.92; transform: rotate(-13deg) scale(1); }
-  }
-
-  .entry-body h2{
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 24px;
-    letter-spacing: -0.005em;
-    margin: 0 0 10px;
-  }
-  .entry-body p{
-    margin: 0 0 20px;
+  .project-desc{
+    font-size: 14px;
+    line-height: 1.6;
     color: var(--ink-soft);
-    font-size: 15px;
-    max-width: 48ch;
+    margin: 0 0 16px;
   }
-
-  .entry-link{
+  .project-link{
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    font-family: var(--font-mono);
-    font-size: 12.5px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #2E6BE6;
+  }
+  .project-card:hover .project-link{ gap: 10px; }
+  .project-link{ transition: gap 160ms ease; }
+
+  .site-footer{
+    padding: 48px 0 64px;
+    font-family: 'DM Sans', -apple-system, 'system-ui', 'Segoe UI', sans-serif;
+  }
+  .footer-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-links{ display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a{
+    font-size: 13.5px;
+    font-weight: 600;
     text-decoration: none;
-    padding-bottom: 2px;
     border-bottom: 1px solid var(--ink);
-    transition: gap 160ms ease, opacity 160ms ease;
+    padding-bottom: 2px;
+    transition: color 140ms ease, border-color 140ms ease;
   }
-  .entry-link:hover{ gap: 11px; }
-  .entry-link .arrow{ transition: transform 160ms ease; }
-  .entry-link:hover .arrow{ transform: translateX(2px); }
-
-  .manifest-end{
-    margin-top: 8px;
-    padding-top: 32px;
-    border-top: 1px solid var(--line);
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.08em;
+  .footer-links a:hover{ color: #2E6BE6; border-color: #2E6BE6; }
+  .footer-meta{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12.5px;
     color: var(--ink-faint);
-    text-align: center;
   }
-
-  footer{
-    padding: 40px 0 64px;
-    font-family: var(--font-mono);
-    font-size: 11.5px;
+  .back-to-top{
     color: var(--ink-faint);
-    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: color 140ms ease;
+  }
+  .back-to-top:hover{ color: var(--ink); }
+
+  @media (max-width: 480px){
+    .footer-inner{ flex-direction: column; align-items: flex-start; }
   }
 
   @media (max-width: 620px){
     .masthead{ padding: 52px 0 40px; }
-    .manifest{ padding: 8px 0 24px; }
-    .entry-card{ grid-template-columns: 1fr; }
-    .entry-visual{ max-width: 220px; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .entry, .stamp{ animation: none; opacity: 1; transform: none; }
+    .projects-grid{ grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
+  <div class="hero-wrap">
+    <nav class="floating-nav">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#top">Anand Wakde</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero" id="top">
+      <h1 class="hero-headline">
+        <span class="mark mark-a">Products.</span><span class="mark mark-b">Payments.</span><span class="mark mark-c">AI.</span>
+      </h1>
+      <p class="hero-greeting">Hello! I'm Anand Wakde <span class="wave">👋</span></p>
+      <a class="scroll-cue" href="#about" aria-label="Scroll down">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
+    </section>
+  </div>
+
   <div class="wrap">
-    <div class="site-mark"><img src="assets/favicon-512.png" alt="AW mark" /></div>
-    <header class="masthead">
-      <div class="eyebrow">BUILD LOG</div>
+    <header class="masthead" id="about">
+      <p class="section-eyebrow">GET TO KNOW ME</p>
+      <h2 class="section-title">About Me</h2>
+
       <div class="id-row">
         <div class="id-photo"><img src="assets/photo.png" alt="Anand Wakde" /></div>
         <div class="id-info">
-          <h1>Anand Wakde</h1>
-          <p class="role-line">Senior Product Owner, Payments Modernization &amp; Compliance<span class="sep">/</span>FSS<span class="sep">/</span>Navi Mumbai, India</p>
-          <p class="tagline">I build and ship tools that cut the manual work out of payments compliance &mdash; deadline tracking, ISO 20022 migration, and scheme monitoring across MEA. This page is the <strong>manifest</strong>: everything shipped, in the order it shipped.</p>
+          <p class="bio-text">I'm a computer science engineer by education and by trade, with 11+ years building payment products across banking, card networks, and financial infrastructure. Today I'm a Senior Product Owner driving Payments Modernization &amp; Compliance at FSS, based in Navi Mumbai, India.</p>
+          <p class="bio-text">Lately I've been obsessed with building <em>with</em> AI, not just talking about it &mdash; shipping working products in days instead of quarters, and figuring out where AI actually removes grunt work versus where it just moves it around.</p>
           <div class="focus-tags">
             <span>ISO 20022</span><span>Payments Modernization</span><span>MEA Compliance Automation</span><span>AI in Fintech</span>
           </div>
@@ -350,9 +596,121 @@
           </div>
         </div>
       </div>
+
+      <div class="currently-building">
+        <p class="section-eyebrow">CURRENTLY BUILDING</p>
+        <div class="building-list">
+          <a class="building-item" href="https://pim.anandwakde.com" target="_blank" rel="noopener">
+            <span class="building-text">
+              <span class="building-title">Payment Intelligence Monitor</span>
+              <span class="building-desc">Watches card-scheme compliance circulars and flags what's overdue before it becomes a penalty.</span>
+            </span>
+            <span class="building-arrow">&#8599;</span>
+          </a>
+          <a class="building-item" href="https://addressiq.anandwakde.com" target="_blank" rel="noopener">
+            <span class="building-text">
+              <span class="building-title">AddressIQ</span>
+              <span class="building-desc">Structures messy payment addresses into SWIFT ISO 20022 fields with a confidence score.</span>
+            </span>
+            <span class="building-arrow">&#8599;</span>
+          </a>
+        </div>
+      </div>
     </header>
 
-    <main class="manifest" id="manifest"></main>
+    <section class="services-section" id="services">
+      <p class="section-eyebrow">SERVICES</p>
+      <h2 class="section-title">What I Do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🎯</span>
+          <h3 class="service-title">Payments Product Strategy</h3>
+          <p class="service-desc">I turn scheme rulebooks and compliance mandates into product roadmaps that actually ship &mdash; for payment gateways, card networks, and the ops teams caught in between.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🧭</span>
+          <h3 class="service-title">Compliance &amp; ISO 20022 Migration</h3>
+          <p class="service-desc">I've lived through the ISO 20022 shift firsthand &mdash; structured addresses, hybrid formats, CBPR+ deadlines &mdash; and I build the tools that make migrations less painful for the teams doing the work.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⚡</span>
+          <h3 class="service-title">AI-Assisted Product Building</h3>
+          <p class="service-desc">I use AI to go from idea to working product in days, not quarters &mdash; prototyping, shipping, and iterating in the open instead of sitting in decks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+      <p class="section-eyebrow">SKILLS &amp; TOOLS</p>
+      <div class="marquee" id="skillsMarquee"></div>
+    </section>
+
+    <section class="timeline-section" id="experience">
+      <p class="section-eyebrow">MY JOURNEY</p>
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline-list">
+
+        <div class="timeline-entry">
+          <div class="timeline-date">Aug 2024 &ndash; Present</div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Senior Product Owner</h3>
+            <p class="timeline-company">FSS &middot; Mumbai, India</p>
+            <ul class="timeline-bullets">
+              <li>Own the product roadmap for payment modernization across acquiring, issuing, and processing platforms.</li>
+              <li>Grew the merchant acquiring business by shaping technical RFP responses that won new client deals.</li>
+              <li>Led the technical integration of multiple Buy Now, Pay Later APIs into the checkout flow.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-date">Apr 2021 &ndash; Aug 2024</div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Product Owner</h3>
+            <p class="timeline-company">Innova Solutions &middot; Remote</p>
+            <ul class="timeline-bullets">
+              <li>Directed SWIFT ISO 20022 migration and MT-to-MX message transformation programs.</li>
+              <li>Designed PSD2-compliant Open Banking and Open Finance API models from scratch.</li>
+              <li>Ran the Agile Release Train as Product Owner across the entire portfolio, doubling as Scrum Master.</li>
+              <li>Mentored cross-functional dev and QA teams shipping to global partner banks.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-date">Jan 2018 &ndash; Apr 2021</div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Business System Analyst</h3>
+            <p class="timeline-company">Fiserv &middot; Pune, India</p>
+            <ul class="timeline-bullets">
+              <li>Cut delivery cycles by 50% by championing Agile practices across payment switch modernization.</li>
+              <li>Shaped requirements for transaction processing across the Mastercard and Visa ecosystems.</li>
+              <li>Spearheaded root-cause analysis that tracked down systemic reliability issues before they became outages.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-date">Mar 2015 &ndash; Jan 2018</div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Deputy Manager &rarr; Assistant Manager</h3>
+            <p class="timeline-company">National Payments Corporation of India (NPCI) &middot; Mumbai, India</p>
+            <ul class="timeline-bullets">
+              <li>Authored the RuPay EMV Contactless specifications banks certify against today.</li>
+              <li>Led product specs for the National Common Mobility Card &mdash; the card behind India's "one card, all transit" push.</li>
+              <li>Built and deployed the RuPay NIV simulator that streamlined certification for every issuing and acquiring bank on the network.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="projects-section" id="work">
+      <p class="section-eyebrow">MY WORK</p>
+      <h2 class="section-title">Featured Products</h2>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
   </div>
 
 <script>
@@ -427,39 +785,68 @@
     return div.innerHTML;
   }
 
-  function renderEntry(p, index){
+  function renderProjectCard(p){
     var visualFn = VISUALS[p.visual];
     return '' +
-      '<article class="entry" style="--i:' + index + '">' +
-        '<div class="entry-meta">' +
-          '<span class="entry-index">' + String(index + 1).padStart(3, '0') + '</span>' +
-          '<span class="sep">/</span>' +
-          '<span>SHIPPED ' + escapeHtml(p.shippedDate) + '</span>' +
-          (p.status === 'live'
-            ? '<span class="sep">/</span><span class="entry-status"><span class="dot"></span>LIVE</span>'
-            : '') +
+      '<a class="project-card" href="' + escapeHtml(p.link) + '" target="_blank" rel="noopener">' +
+        '<div class="project-visual">' + (visualFn ? visualFn() : '') + '</div>' +
+        '<div class="project-body">' +
+          (p.status === 'live' ? '<span class="project-status">LIVE</span>' : '') +
+          '<h3 class="project-title">' + escapeHtml(p.title) + '</h3>' +
+          '<p class="project-desc">' + escapeHtml(p.description) + '</p>' +
+          '<span class="project-link">' + escapeHtml(p.linkLabel || 'View project') + ' <span class="arrow">&rarr;</span></span>' +
         '</div>' +
-        '<div class="entry-card">' +
-          '<div class="entry-visual">' +
-            (visualFn ? visualFn() : '') +
-            '<div class="stamp"><span class="stamp-text">SHIPPED<br/>&#10003;</span></div>' +
-          '</div>' +
-          '<div class="entry-body">' +
-            '<h2>' + escapeHtml(p.title) + '</h2>' +
-            '<p>' + escapeHtml(p.description) + '</p>' +
-            '<a class="entry-link" href="' + escapeHtml(p.link) + '">' + escapeHtml(p.linkLabel || 'View project') + ' <span class="arrow">&rarr;</span></a>' +
-          '</div>' +
-        '</div>' +
-      '</article>';
+      '</a>';
   }
 
-  var container = document.getElementById('manifest');
-  container.innerHTML = PROJECTS.map(renderEntry).join('') +
-    '<div class="manifest-end">&mdash; more entries land here as they ship &mdash;</div>';
+  var projectsContainer = document.getElementById('projectsGrid');
+  projectsContainer.innerHTML = PROJECTS.map(renderProjectCard).join('');
+
+  // ---------- skills marquee ----------
+  var SKILLS = [
+    // Functional Skills
+    "Business Analysis", "Requirements", "User Stories", "Use Cases", "Process Docs",
+    "Data Analysis", "Prioritization", "Roadmapping", "Acceptance Criteria", "BRD",
+    "SIT & UAT", "End to End Product Lifecycle", "Implementation",
+    // Payments & Financial Services
+    "SWIFT", "ISO 20022", "MT/MX", "Cross-border Payments", "PSD2", "EMV", "ISO 8583",
+    "Settlement", "Reconciliation", "Payment Gateway", "High-Value Payment Systems",
+    "Payment Transformation", "Migration",
+    // Agile Delivery
+    "Agile", "Scrum", "SAFe", "Kanban", "ART", "PI Planning", "Sprint Planning",
+    "Facilitation", "SDLC", "Scrum Master",
+    // Tools
+    "Jira", "Confluence", "Visio", "Lucidchart", "Figma", "Miro", "ServiceNow",
+    "Payment Simulators", "Test Simulators", "RCA", "Fishbone",
+    // People Skills
+    "Communication", "Collaboration", "Stakeholder Management", "Leadership",
+    "Presentation", "Independent Work", "Teamwork"
+  ];
+
+  function renderSkillGroup(){
+    return SKILLS.map(function(s){ return '<span class="skill-tag">' + escapeHtml(s) + '</span>'; }).join('');
+  }
+
+  var marqueeEl = document.getElementById('skillsMarquee');
+  marqueeEl.innerHTML =
+    '<div class="marquee-track">' +
+      '<div class="marquee-group">' + renderSkillGroup() + '</div>' +
+      '<div class="marquee-group" aria-hidden="true">' + renderSkillGroup() + '</div>' +
+    '</div>';
 </script>
 
-<footer class="wrap">
-  &copy; <span id="year"></span> Anand Wakde
+<footer class="site-footer wrap" id="contact">
+  <p class="section-eyebrow">GET IN TOUCH</p>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/anand-wakde/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      <a href="mailto:anandwakde@gmail.com">anandwakde@gmail.com</a>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; <span id="year"></span> Anand Wakde</span>
+      <a class="back-to-top" href="#top">Back to top &uarr;</a>
+    </div>
+  </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
