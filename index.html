@@ -155,13 +155,6 @@
   .hero-social a:hover{ text-decoration: underline; }
 
   .hero-photo-wrap{ position: relative; }
-  .hero-photo{
-    aspect-ratio: 3 / 4;
-    border-radius: 4px;
-    overflow: hidden;
-    background: var(--pf-orange);
-  }
-  .hero-photo img{ width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; display: block; mix-blend-mode: luminosity; opacity: 0.92; }
   .hero-sparkle{ position: absolute; z-index: 2; }
   .hero-sparkle.s1{ width: 30px; height: 30px; fill: var(--pf-gold); top: -14px; left: -18px; }
   .hero-sparkle.s2{ width: 18px; height: 18px; fill: var(--pf-gold); top: 30px; left: -34px; }
@@ -206,9 +199,98 @@
   }
   .hero-spacer{ height: 46px; background: var(--pf-cream); }
 
+  /* ---------- payment success animation ---------- */
+  .payment-anim{
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--pf-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pa-ripple{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border: 3px solid rgba(243,233,210,0.7);
+    border-radius: 50%;
+    opacity: 0;
+    animation: pa-ripple 2.6s ease-out infinite;
+  }
+  .pa-ripple.r2{ animation-delay: 1.3s; }
+  @keyframes pa-ripple{
+    0%{ transform: scale(0.55); opacity: 0.65; }
+    100%{ transform: scale(2.4); opacity: 0; }
+  }
+  .pa-card{
+    position: relative;
+    z-index: 2;
+    width: 62%;
+    aspect-ratio: 8 / 5;
+    background: var(--pf-cream);
+    border-radius: 10px;
+    padding: 10% 8%;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+    transform: rotate(-3deg);
+    animation: pa-float 3.6s ease-in-out infinite;
+  }
+  @keyframes pa-float{
+    0%, 100%{ transform: rotate(-3deg) translateY(0); }
+    50%{ transform: rotate(-3deg) translateY(-8px); }
+  }
+  .pa-chip{ width: 24%; aspect-ratio: 1.3/1; background: var(--pf-gold); border-radius: 3px; margin-bottom: 26%; }
+  .pa-line{ height: 8%; width: 72%; background: rgba(23,23,15,0.16); border-radius: 3px; margin-bottom: 12%; }
+  .pa-line.short{ width: 42%; }
+  .pa-check{
+    position: absolute;
+    z-index: 3;
+    bottom: 12%;
+    right: 12%;
+    width: 22%;
+    aspect-ratio: 1/1;
+    background: var(--signal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: scale(0.4);
+    animation: pa-check-in 520ms cubic-bezier(.2,1.6,.4,1) 500ms both, pa-check-pulse 2.4s ease-in-out 1.2s infinite;
+  }
+  .pa-check svg{ width: 46%; height: 46%; stroke: var(--pf-cream); }
+  @keyframes pa-check-in{ to{ opacity: 1; transform: scale(1); } }
+  @keyframes pa-check-pulse{ 0%, 100%{ transform: scale(1); } 50%{ transform: scale(1.08); } }
+  .pa-badge{
+    position: absolute;
+    z-index: 3;
+    bottom: 8%;
+    left: 50%;
+    background: var(--pf-black);
+    color: var(--pf-cream);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    animation: pa-badge-in 500ms ease 1.1s both;
+  }
+  @keyframes pa-badge-in{ to{ opacity: 1; transform: translate(-50%, 0); } }
+
+  @media (prefers-reduced-motion: reduce){
+    .pa-ripple{ animation: none; opacity: 0; }
+    .pa-card{ animation: none; }
+    .pa-check{ animation: pa-check-in 1ms forwards; }
+    .pa-badge{ animation: pa-badge-in 1ms forwards; }
+  }
+
   @media (max-width: 760px){
     .hero-inner{ grid-template-columns: 1fr; }
-    .hero-photo{ max-width: 280px; aspect-ratio: 4/5; }
+    .payment-anim{ max-width: 280px; aspect-ratio: 4/5; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -660,7 +742,19 @@
         <svg class="hero-sparkle s1"><use href="#sparkle"/></svg>
         <svg class="hero-sparkle s2"><use href="#sparkle"/></svg>
         <svg class="hero-sparkle s3"><use href="#sparkle"/></svg>
-        <div class="hero-photo"><img src="assets/photo.png" alt="Anand Wakde" /></div>
+        <div class="payment-anim" role="img" aria-label="Animated illustration of a card payment completing successfully">
+          <div class="pa-ripple r1"></div>
+          <div class="pa-ripple r2"></div>
+          <div class="pa-card">
+            <div class="pa-chip"></div>
+            <div class="pa-line"></div>
+            <div class="pa-line short"></div>
+          </div>
+          <div class="pa-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"></polyline></svg>
+          </div>
+          <div class="pa-badge">Payment Successful</div>
+        </div>
       </div>
     </div>
     <div class="hero-strip">
@@ -678,7 +772,7 @@
       <div class="id-row">
         <div class="id-photo"><img src="assets/photo.png" alt="Anand Wakde" /></div>
         <div class="id-info">
-          <p class="bio-text">I'm a computer science engineer by education and by trade, with 11+ years building payment products across banking, card networks, and financial infrastructure. Today I'm a Senior Product Owner driving Payments Modernization &amp; Compliance at FSS, based in Navi Mumbai, India.</p>
+          <p class="bio-text">I'm a computer science engineer by education and by trade, with 11+ years building payment products across banking, card networks, and financial infrastructure. Today I'm a Senior Product Owner driving Payments Modernization &amp; Compliance at FSS.</p>
           <p class="bio-text">Lately I've been obsessed with building <em>with</em> AI, not just talking about it &mdash; shipping working products in days instead of quarters, and figuring out where AI actually removes grunt work versus where it just moves it around.</p>
           <div class="focus-tags">
             <span>ISO 20022</span><span>Payments Modernization</span><span>MEA Compliance Automation</span><span>AI in Fintech</span>
@@ -942,7 +1036,6 @@
 
     <div class="footer-card">
       <h3 class="footer-card-title">Contact</h3>
-      <p class="footer-contact-row"><svg class="sparkle-icon"><use href="#sparkle"/></svg>Navi Mumbai, India</p>
       <p class="footer-contact-row"><svg class="sparkle-icon"><use href="#sparkle"/></svg><a href="mailto:anandwakde@gmail.com">anandwakde@gmail.com</a></p>
     </div>
 
