@@ -205,14 +205,24 @@
     margin: 0 0 28px;
     text-wrap: balance;
   }
-  .hero-social{ display: flex; flex-direction: column; gap: 6px; }
+  .hero-social{ display: flex; gap: 12px; }
   .hero-social a{
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1.5px solid var(--pf-gold);
     color: var(--pf-gold);
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
   }
-  .hero-social a:hover{ text-decoration: underline; }
+  .hero-social a svg{ width: 20px; height: 20px; fill: currentColor; }
+  .hero-social a:hover{
+    background: var(--pf-gold);
+    color: var(--pf-black);
+    transform: translateY(-2px);
+  }
 
   .hero-photo-wrap{ position: relative; width: fit-content; margin-left: auto; }
   .hero-sparkle{ position: absolute; z-index: 2; animation: sparkle-twinkle 2.4s ease-in-out infinite; }
@@ -798,8 +808,12 @@
       <div class="hero-copy">
         <h1 class="hero-title">Building payments,<br>one shipped product<br>at a time.</h1>
         <div class="hero-social">
-          <a href="https://www.linkedin.com/in/anand-wakde/" target="_blank" rel="noopener">LI: /anand-wakde</a>
-          <a href="mailto:anandwakde@gmail.com">Email: anandwakde@gmail.com</a>
+          <a href="https://www.linkedin.com/in/anand-wakde/" target="_blank" rel="noopener" aria-label="LinkedIn: /anand-wakde">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="mailto:anandwakde@gmail.com" aria-label="Email: anandwakde@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v13A1.5 1.5 0 0 1 19.5 20h-15A1.5 1.5 0 0 1 3 18.5v-13zm2.2.5 6.8 5.6L18.8 6H5.2zM19 8.1l-6.5 5.4a1 1 0 0 1-1.28 0L5 8.1v10.4h14V8.1z"/></svg>
+          </a>
         </div>
       </div>
       <div class="hero-photo-wrap">
